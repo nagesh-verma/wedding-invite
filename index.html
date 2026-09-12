@@ -47,7 +47,15 @@
     <div class="petals" aria-hidden="true"></div>
 
     <button class="music-btn" id="musicBtn" aria-label="Toggle background music" type="button">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-volume2 h-5 w-5"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"></path><path d="M16 9a5 5 0 0 1 0 6"></path><path d="M19.364 18.364a9 9 0 0 0 0-12.728"></path></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="lucide lucide-volume2 h-5 w-5">
+        <path
+          d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z">
+        </path>
+        <path d="M16 9a5 5 0 0 1 0 6"></path>
+        <path d="M19.364 18.364a9 9 0 0 0 0-12.728"></path>
+      </svg>
     </button>
     <audio id="music" loop preload="auto">
       <source src="assets/background.mp3" type="audio/mpeg">
@@ -57,28 +65,35 @@
 
       <section id="hero" class="hero-section relative w-full overflow-hidden">
         <!-- Placeholder images: replace these files in /assets/ -->
-        <img src="assets/hero-mobile.png" alt="Floral wedding invitation backdrop" class="bg-mobile absolute inset-0 w-full h-full">
+        <img src="assets/hero-mobile.png" alt="Floral wedding invitation backdrop"
+          class="bg-mobile absolute inset-0 w-full h-full">
         <div class="hero-overlay-gradient absolute inset-0" aria-hidden="true"></div>
 
         <div class="hero-inner relative z-10">
           <div class="hero-top text-rose-deep">
-            <img src="assets/ganesha-hero.png" alt="Lord Ganesha" width="128" height="140"
-              class="ganesha-img">
+            <img src="assets/ganesha-hero.png" alt="Lord Ganesha" width="128" height="140" class="ganesha-img">
             <p class="ganesha-text">‖ Shree Ganeshaya Namah ‖</p>
           </div>
 
           <p class="hero-kicker">Together with their families</p>
           <p class="hero-intro">We cordially invite you to witness the beginning of our forever and celebrate the
             wedding ceremony of</p>
-
-          <h1 class="hero-name"><span class="font-script name-roopa">Priya</span></h1>
-          <p class="hero-parents">D/o Mr. Rajendra Prasad<br>&amp; Mrs. Bikki Devi</p>
-
+          <h1 class="hero-name"><span class="font-script">Nagesh</span></h1>
+          <p class="hero-parents">S/o Late. Shri Naresh Prasad<br>&amp; Late Smt. Tara Devi</p>
           <p class="hero-with font-script">with</p>
+          <h1 class="hero-name"><span class="font-script">Priya</span></h1>
+          <p class="hero-parents">D/o Shri Rajendra Prasad<br>&amp; Smt Bikki Devi</p>
 
-          <h1 class="hero-name"><span class="font-script name-anoop">Nagesh</span></h1>
-          <p class="hero-parents">S/o Late Mr. Naresh Prasad<br>&amp; Late Mrs. Tara Devi</p>
+
+
+
         </div>
+
+        <a class="scroll-cue" href="#date" aria-label="Scroll to wedding details">
+          <span class="scroll-cue-label">Scroll to explore</span>
+          <span class="scroll-cue-mouse" aria-hidden="true"><i></i></span>
+          <span class="scroll-cue-chevron" aria-hidden="true"></span>
+        </a>
       </section>
 
       <section id="date" class="section cream">
@@ -121,6 +136,17 @@
           <div class="couple-grid">
             <article class="couple-card">
               <div class="couple-photo">
+                <img src="assets/groom-photo.jpg" alt="Groom Nagesh" loading="lazy">
+              </div>
+              <div class="couple-card-body">
+                <p class="date-label">THE GROOM</p>
+                <h3>Nagesh</h3>
+                <p>Thoughtful, dependable, and effortlessly calm — the steady presence who turns every little moment
+                  into something beautifully planned.</p>
+              </div>
+            </article>
+            <article class="couple-card">
+              <div class="couple-photo">
                 <img src="assets/bride-photo.jpg" alt="Bride Priya" loading="lazy">
               </div>
               <div class="couple-card-body">
@@ -129,42 +155,50 @@
                 <p>Creative, warm-hearted, and always ready to turn an ordinary moment into a beautiful memory.</p>
               </div>
             </article>
-            <article class="couple-card">
-              <div class="couple-photo">
-                <img src="assets/groom-photo.jpg" alt="Groom Nagesh" loading="lazy">
-              </div>
-              <div class="couple-card-body">
-                <p class="date-label">THE GROOM</p>
-                <h3>Nagesh</h3>
-                <p>Thoughtful, dependable, and effortlessly calm — the steady presence who turns every little moment into something beautifully planned.</p>
-              </div>
-            </article>
+
           </div>
           <blockquote>“Between her spontaneity and his steady plans, they found their perfect match.”</blockquote>
         </div>
       </section>
 
-      <section id="story" class="section blush">
+      <section id="story" class="section blush algorithm-section">
         <div class="container reveal">
-          <p class="eyebrow sage">OUR JOURNEY</p>
-          <h2>Our Love Story</h2>
+          <p class="eyebrow sage">A STORY, PERFECTLY COMPILED</p>
+          <h2>The Algorithm Worked</h2>
           <div class="ornament">❀</div>
-          <div class="story-grid">
-            <article><span>💌</span>
-              <p class="date-label">THE FIRST HELLO</p>
-              <h3>A reel, a message & a little curiosity</h3>
-              <p>We met through a common friend, and soon reels turned into conversations.</p>
-            </article>
-            <article><span>✨</span>
-              <p class="date-label">THE JOURNEY</p>
-              <h3>From gym buddies to something more</h3>
-              <p>Between conversations, laughter and gym sessions, we slowly became part of each other's everyday lives.</p>
-            </article>
-            <article><span>💍</span>
-              <p class="date-label">FOREVER</p>
-              <h3>And now, our next chapter</h3>
-              <p>Somewhere along the way, friendship became love, and we knew we wanted forever together.</p>
-            </article>
+          <div class="algorithm-card">
+            <div class="algorithm-bar" aria-hidden="true"><span></span><span></span><span></span><em>story.exe</em>
+            </div>
+            <div class="algorithm-body">
+              <div class="algorithm-step algorithm-input">
+                <p class="algorithm-label">INPUT</p>
+                <h3>Two people,<br>one introduction.</h3>
+                <p>Introduced by a common friend, with no idea what would come next.</p>
+              </div>
+              <div class="algorithm-step algorithm-process">
+                <p class="algorithm-label">PROCESSING</p>
+                <div class="algorithm-flow"
+                  aria-label="Messages, reels, conversations, gym sessions, and getting to know each other">
+                  <span>Messages</span><b>→</b><span>Reels</span><b>→</b><span>Conversations</span><b>→</b><span>little
+                    moments</span><b>→</b><span>family meetups</span><b>→</b><span>Knowing each other</span>
+                </div>
+              </div>
+              <div class="algorithm-step algorithm-output">
+                <p class="algorithm-label">OUTPUT</p>
+                <h3>A surprisingly<br>good match. <span>♡</span></h3>
+              </div>
+            </div>
+            <div class="algorithm-footer">
+              <div class="algorithm-status">
+                <p class="algorithm-label">STATUS</p>
+                <p><code>Relationship:</code> <strong>Confirmed</strong></p>
+                <p><code>Wedding:</code> <strong>Deploying...</strong></p>
+              </div>
+              <div class="algorithm-release">
+                <p class="algorithm-label">NEXT RELEASE</p>
+                <p>Forever <span>♡</span></p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -177,7 +211,8 @@
 
           <div class="gallery-carousel-wrap">
             <div class="gallery-scroll-container" id="galleryScroll">
-              <article class="gallery-card is-active" data-image="assets/gallery-1.jpeg" data-alt="Our First Picture Together">
+              <article class="gallery-card is-active" data-image="assets/gallery-1.jpeg"
+                data-alt="Our First Picture Together">
                 <div class="gallery-frame">
                   <img src="assets/gallery-1.jpeg" alt="Our First Picture Together" loading="lazy">
                 </div>
@@ -227,27 +262,39 @@
                event-mehendi.jpg, event-haldi.jpg, event-sangeet.jpg, event-wedding.jpg -->
           <div class="events event-card-grid">
 
+            <article class="event event-card" style="--event-image: url('assets/rituals.png')">
+              <div class="event-card-content">
+                <h3>Wedding Rituals</h3>
+                <p>A sacred beginning to our wedding celebrations with cherished family traditions and blessings.</p>
+                <div class="event-details">
+                  <div><span>Lagan</span><strong>Fri · November 20, 2026</strong></div>
+                  <div><span>Madwa, Matkor, Haldi</span><strong>Sat · November 21, 2026</strong></div>
+                  <div><span>Ghritdhari</span><strong>Sun · November 22, 2026 (Morning)</strong></div>
+                  <div><span>Venue</span><strong>R.R.B. colony,Ratu road, Ranchi</strong></div>
+                </div>
+              </div>
+            </article>
+
             <article class="event event-card" style="--event-image: url('assets/event-mehendi.png')">
               <div class="event-card-content">
-                <p class="date-label">DAY ONE • EVENING</p>
                 <h3>Mehendi Ceremony</h3>
                 <p>Our wedding festivities begin with an intimate Mehendi celebration, filled with colors, music, and
                   joyful moments with our loved ones.</p>
                 <div class="event-details">
-                  <div><span>Date</span><strong>Sat · November 22, 2026</strong></div>
+                  <div><span>Date</span><strong>Sun · November 22, 2026</strong></div>
                   <div><span>Time:6PM onwards</span><strong>Evening</strong></div>
-                  <div><span>Venue</span><strong>At the respective Bride &amp; Groom's residences</strong></div>
+                  <div><span>Venue</span><strong>R.R.B. colony,Ratu road, Ranchi</strong></div>
                 </div>
               </div>
             </article>
 
             <article class="event event-card" style="--event-image: url('assets/event-haldi.png')">
               <div class="event-card-content">
-                <p class="date-label">DAY TWO • MORNING</p>
-                <h3>Haldi Ceremony</h3>
-                <p>Let’s begin the celebrations with sunshine, laughter, and the beautiful Haldi ceremony.</p>
+                <h3>The Ubtan Affair</h3>
+                <p>Let’s begin the celebrations with sunshine, laughter, and a little golden glow as we embrace the
+                  timeless ritual of Ubtan.</p>
                 <div class="event-details">
-                  <div><span>Date</span><strong>Sun · November 23, 2026</strong></div>
+                  <div><span>Date</span><strong>Mon · November 23, 2026</strong></div>
                   <div><span>Time:10AM onwards</span><strong>Morning</strong></div>
                   <div><span>Venue</span><strong>Royal Palace Banquet Hall, Lal-Kothi, Ratu Rd, Ranchi</strong></div>
                 </div>
@@ -256,12 +303,11 @@
 
             <article class="event event-card" style="--event-image: url('assets/event-sangeet.png')">
               <div class="event-card-content">
-                <p class="date-label">DAY TWO • EVENING</p>
-                <h3>Sangeet & Engagement</h3>
+                <h3>Sangeet sealed with a Ring</h3>
                 <p>An evening of music, dance, love, and celebration as we come together to mark the beginning of our
                   forever.</p>
                 <div class="event-details">
-                  <div><span>Date</span><strong>Sun · November 23, 2026</strong></div>
+                  <div><span>Date</span><strong>Mon · November 23, 2026</strong></div>
                   <div><span>Time:6PM onwards</span><strong>Evening</strong></div>
                   <div><span>Venue</span><strong>Royal Palace Banquet Hall, Lal-Kothi, Ratu Rd, Ranchi</strong></div>
                 </div>
@@ -270,12 +316,11 @@
 
             <article class="event event-card" style="--event-image: url('assets/event-wedding.png')">
               <div class="event-card-content">
-                <p class="date-label">DAY THREE • EVENING</p>
                 <h3>Wedding Ceremony</h3>
                 <p>As we exchange our Vermalas and take the first step towards a lifetime of togetherness, we invite you
                   to bless our union with your love and presence.</p>
                 <div class="event-details">
-                  <div><span>Date</span><strong>Mon · November 24, 2026</strong></div>
+                  <div><span>Date</span><strong>Tue · November 24, 2026</strong></div>
                   <div><span>Time</span><strong>07:00 PM onwards</strong></div>
                   <div><span>Venue</span><strong>Carnival Banquet Hall, Harmu Rd, Ranchi</strong></div>
                 </div>
@@ -291,7 +336,8 @@
           <p class="eyebrow sage">🌿 🌸 🌼 🌿</p>
           <h2>Awaiting Your Noble Presence</h2>
           <div class="ornament">❀</div>
-          <p>Because celebrating two souls coming together is twice the joy — and it would be incomplete without you.</p>
+          <p>Because celebrating two souls coming together is twice the joy — and it would be incomplete without you.
+          </p>
         </div>
       </section>
 
@@ -306,7 +352,10 @@
                 <p class="date-label">GROOM'S FAMILY</p>
                 <div class="family-mark">❀</div>
                 <p>Awaiting your gracious presence</p>
-                <h3>Late Mr. Naresh Prasad<br>Late Mrs. Tara Devi</h3>
+                <h3>
+                  Lt. Naresh Prasad<br>
+                  &amp;<br> Lt. Tara Devi
+                </h3>
               </div>
             </article>
             <article class="family-card" style="--family-image: url('assets/family-bride.jpg')">
@@ -314,7 +363,10 @@
                 <p class="date-label">BRIDE'S FAMILY</p>
                 <div class="family-mark">❀</div>
                 <p>Awaiting your gracious presence</p>
-                <h3>Mr. Rajendra Prasad<br>Mrs. Bikki Devi</h3>
+                <h3>
+                  Rajendra Prasad<br>
+                  &amp;<br>Bikki Devi
+                </h3>
               </div>
             </article>
           </div>
@@ -331,7 +383,8 @@
               <div class="venue-icon">⌖</div>
               <h3>Carnival Banquet Hall</h3>
               <p>Harmu Rd, near JB Celebration Banquet,<br>Ranchi, Jharkhand</p>
-              <a class="gold-btn" href="https://maps.app.goo.gl/pEW5LR1vyjRLPdv47" target="_blank" rel="noopener">Get Directions ↗</a>
+              <a class="gold-btn" href="https://maps.app.goo.gl/pEW5LR1vyjRLPdv47" target="_blank" rel="noopener">Get
+                Directions ↗</a>
             </div>
             <iframe title="Carnival Banquet Hall map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3663.474983944932!2d85.2999367749356!3d23.334800278956163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f4e17a22b7e113%3A0xd3303207f14a1e3!2sCarnival%20Banquet%20Hall!5e0!3m2!1sen!2sin!4v1787901698875!5m2!1sen!2sin"
@@ -340,31 +393,24 @@
         </div>
       </section>
 
-      <!-- <section id="rsvp" class="section cream">
-        <div class="container narrow reveal">
+      <section id="rsvp" class="section cream">
+        <div class="container narrow reveal" style="text-align: center;">
           <p class="eyebrow sage">WE'D LOVE TO SEE YOU</p>
-          <h2>Will You Join Us?</h2>
+          <h2>RSVP</h2>
           <div class="ornament">✦ ❀ ✦</div>
-          <form id="rsvpForm" class="rsvp-form">
-            <label>Your Name<input required name="name" placeholder="Enter your name"></label>
-            <label>Will you attend?<select name="attendance">
-                <option>Joyfully accepts</option>
-                <option>Regretfully declines</option>
-              </select></label>
-            <label>Message<textarea name="message" rows="4"
-                placeholder="Leave a message for Priya & Nagesh"></textarea></label>
-            <button class="gold-btn" type="submit">Send RSVP</button>
-          </form>
-          <p id="rsvpNote"></p>
+          <p style="margin-top: 1rem; font-size: 1rem; line-height: 1.8; color: #5e4b3a;">
+            Dinesh Prasad, Amesh Prasad, Jitendar Narayan Singh, Kumar Rohit, Promod Kumar Singh, Bibhuti Kumar, Anubhav
+            Verma, Aryan Verma
+          </p>
         </div>
-      </section> -->
+      </section>
 
       <footer>
-        <p class="eyebrow gold">WITH LOVE</p>
-        <h2>Priya &amp; Nagesh</h2>
+        <p style="color: #fbf5ed;">WITH LOVE</p>
+        <h2>Nagesh &amp; Priya</h2>
         <div>💐</div>
         <p>24th November 2026</p>
-        <small>#PRIYAWEDSNAGESH</small>
+        <small>#NARIYAFOREVER</small>
       </footer>
     </main>
   </div>

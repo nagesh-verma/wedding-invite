@@ -70,6 +70,27 @@ const revealObserver=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add("visible")});
 },{threshold:.12});
 
+// Keep the hero's scroll invitation visible even when its artwork is taller
+// than the viewport, then remove it once guests begin exploring the details.
+const hero=document.querySelector("#hero");
+const scrollCue=document.querySelector(".scroll-cue");
+function updateScrollCue(){
+  if(!hero || !scrollCue) return;
+  scrollCue.classList.toggle("is-hidden", window.scrollY > Math.max(80, hero.offsetHeight - window.innerHeight - 80));
+}
+updateScrollCue();
+window.addEventListener("scroll", updateScrollCue, {passive:true});
+const dateSection=document.querySelector("#date");
+if(dateSection && scrollCue){
+  const scrollCueObserver=new IntersectionObserver(entries=>{
+    if(entries[0].isIntersecting){
+      scrollCue.classList.add("is-hidden");
+      scrollCueObserver.disconnect();
+    }
+  },{threshold:.1});
+  scrollCueObserver.observe(dateSection);
+}
+
 const petals=document.querySelector(".petals");
 ["🌸","🌼","🍃","✿","❀"].forEach((p,i)=>{
   for(let j=0;j<3;j++){
