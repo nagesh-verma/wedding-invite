@@ -30,3 +30,11 @@ Modern mobile browsers restrict autoplay with sound. Because the guest taps `TAP
 The background music also starts only after the tap, so it is much more reliable on mobile.
 
 All invitation content remains ordinary HTML/CSS and can be edited directly.
+
+### Configure the gallery from the URL
+
+Pass a comma-separated list of image paths in the `gallery` query parameter to replace the default gallery:
+
+`?gallery=assets/photo-one.jpeg,assets/photo-two.jpeg`
+
+The paths are relative to the invitation page. If `gallery` is omitted or empty, the default images in `index.html` are shown.

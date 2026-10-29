@@ -276,8 +276,43 @@ startBackgroundMusic();
 
 // Gallery zoom lightbox
 const galleryContainer = document.querySelector("#galleryScroll");
-const galleryCards = galleryContainer ? [...galleryContainer.querySelectorAll(".gallery-card")] : [];
+const gallerySection = document.querySelector("#gallery");
+const coupleSection = document.querySelector("#couple");
 const galleryLightbox = document.querySelector("#galleryLightbox");
+const galleryParams = new URLSearchParams(window.location.search);
+const hasGallery = galleryParams.has("gallery");
+const galleryImages = galleryParams.get("gallery")
+  ?.split(",")
+  .map(image => image.trim())
+  .filter(Boolean);
+
+if(hasGallery){
+  gallerySection?.setAttribute("hidden", "");
+  coupleSection?.setAttribute("hidden", "");
+}
+
+if(hasGallery && galleryContainer && galleryImages?.length){
+  galleryContainer.replaceChildren(...galleryImages.map((image, index) => {
+    const altText = `Wedding memory ${index + 1}`;
+    const card = document.createElement("article");
+    card.className = `gallery-card${index === 0 ? " is-active" : ""}`;
+    card.dataset.image = image;
+    card.dataset.alt = altText;
+
+    const frame = document.createElement("div");
+    frame.className = "gallery-frame";
+
+    const img = document.createElement("img");
+    img.src = image;
+    img.alt = altText;
+    img.loading = "lazy";
+
+    frame.append(img);
+    card.append(frame);
+    return card;
+  }));
+}
+const galleryCards = galleryContainer ? [...galleryContainer.querySelectorAll(".gallery-card")] : [];
 const galleryZoomImg = document.querySelector("#galleryZoomImg");
 const galleryClose = document.querySelector("#galleryClose");
 
